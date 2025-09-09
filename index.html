@@ -1,0 +1,211 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carta Secreta</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #cce7ff;
+    }
+    .screen {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .active {
+      display: flex;
+    }
+    .password-screen {
+      flex-direction: column;
+    }
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 60px);
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .key {
+      background-color: #87cefa;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .key:hover {
+      background-color: #4682b4;
+    }
+    .input-display {
+      font-size: 24px;
+      margin-top: 20px;
+      letter-spacing: 8px;
+    }
+    .notepad {
+      background-color: #fefefe;
+      border: 3px solid #6fa3ef;
+      padding: 20px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      text-align: left;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      line-height: 1.6;
+      color: #333; /* Texto gris oscuro */
+    }
+    .notepad h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="passwordScreen" class="screen password-screen active">
+  <h2>🔒 Enter password</h2>
+  <div class="input-display" id="inputDisplay">••••</div>
+  <div class="keypad">
+    <button class="key" onclick="enterDigit('1')">1</button>
+    <button class="key" onclick="enterDigit('2')">2</button>
+    <button class="key" onclick="enterDigit('3')">3</button>
+    <button class="key" onclick="enterDigit('4')">4</button>
+    <button class="key" onclick="enterDigit('5')">5</button>
+    <button class="key" onclick="enterDigit('6')">6</button>
+    <button class="key" onclick="enterDigit('7')">7</button>
+    <button class="key" onclick="enterDigit('9')">9</button>
+    <button class="key" onclick="enterDigit('8')">8</button>
+    <div></div>
+    <button class="key" onclick="enterDigit('0')">0</button>
+    <div></div>
+   </div>
+  <div class="note-container">
+    <p>La contraseña es la fecha de nuestro aniversario. 🎉</p>
+  </div>
+</div>
+<div id="notepadScreen" class="screen">
+  <div class="notepad">
+    <h3>📅 10 Septiembre 2025 </h3>
+    <h4>💌 Querido Alecito </h4>
+    <p>
+      Hoy no es un dia cualquiera, por que un dia como hoy nacio una persona muy especial para mi, desde que te conozco iluminaste mi vida por que eso eres,eres el sol capaz de mejorar la vida de quien te topas
+Quiero que sepas lo feliz que soy por tenerte en mi vida. Desde que llegaste, todo cambió para mejor.
+      Me haces sentir amada, cuidada y acompañada de una forma que nunca antes había sentido.
+    </p>
+    <p>
+      A tu lado aprendí lo que es el amor verdadero, ese que se demuestra con acciones, con palabras sinceras
+      y con esos pequeños detalles que hacen la diferencia. Gracias por estar siempre conmigo, por darme tu
+      tiempo, tu cariño y tu comprensión.
+    </p>
+    <p>
+      No sé cómo explicarlo, pero contigo mi corazón está en paz. Eres mi alegría diaria
+      y la razón de tantas sonrisas.
+    </p>
+    <p>
+      Te amo profundamente. ♡
+    </p>
+
+    <div class="image-container">
+<img src="Foto1.jpg" alt="Foto" style="width: 300px; border-radius: 10px; display: inline-block; margin: 15px 25px 0 0px;">
+<img src="IMG.jpg" alt="Foto" style="width: 150px; border-radius: 10px; display: inline-block; margin: 20px 10px 0 10px;">
+
+
+
+<div style="text-align:center; margin-top:20px;">
+  <a href="https://www.tiktok.com/@theoojeon/video/7143571877624024325" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 15px; 
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 Feliz
+  </a>
+
+  <a href="https://www.tiktok.com/@gilberto.xyz/video/7278575766760066309" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 15px; 
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 cumpleaños
+  </a>
+
+  <a href="https://www.tiktok.com/@emo_lientito/video/7091515004968652038" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 15px; 
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 mi
+  </a>
+
+  <a href="https://www.tiktok.com/@tuzzipop/video/7401816017560882437" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 niño
+  </a>
+
+  <a href="https://www.tiktok.com/@keey3008/video/7264654863760510213" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 lindo.
+  </a>
+</div>
+
+<div style="text-align:center; margin-top:20px;">
+  <a href="https://www.tiktok.com/@evildavidh/video/7265088399499873542" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 Te
+  </a>
+
+  <a href="https://www.tiktok.com/@frases_random4/video/7156840624510078214" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 amo
+  </a>
+
+  <a href="https://www.tiktok.com/@j_energy/video/7469573547548118278" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 mucho
+  </a>
+
+  <a href="https://www.tiktok.com/@key_zelp/video/7539683682433518904" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 bb
+  </a>
+
+<div style="text-align:center; margin-top:20px;">
+  <a href="https://www.facebook.com/share/r/1DHEAxLTXG/" target="_blank"
+     style="background:#4267B2; color:white; padding:10px 20px;
+            text-decoration:none; border-radius:8px; margin:5px; display:inline-block;">
+    🎬 ❤️❤️
+  </a>
+</div>
+
+ <p>
+      Aun te debo tu regalo prometido, que ese lo iremos a comprar en algun momento, te lo juro ❤️❤️
+    </p>
+
+  </div>
+</div>
+<script>
+  const correctPassword = '2412';
+  let input = '';
+  function enterDigit(digit) {
+    if (input.length < 4) {
+      input += digit;
+    }
+    const display = document.getElementById('inputDisplay');
+    display.textContent = input.padEnd(4, '•');
+    if (input.length === 4) {
+      if (input === correctPassword) {
+        document.getElementById('passwordScreen').classList.remove('active');
+        document.getElementById('notepadScreen').classList.add('active');
+      } else {
+        alert('Contraseña incorecta, intenta de nuevo');
+        input = '';
+        display.textContent = '••••';
+      }
+    }
+  }
+</script>
+</body>
+</html>
